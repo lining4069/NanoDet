@@ -1,12 +1,11 @@
 # NanoDet-PyTorch
 
-* 说明：NanoDet作者开源代码地址：https://github.com/RangiLyu/nanodet  （致敬）
-* **该代码基于NanoDet项目进行小裁剪，专门用来实现Python语言、PyTorch 版本的代码，下载直接能使用，支持图片、视频文件、摄像头实时目标检测。**
+* NanoDet作者开源代码地址：https://github.com/RangiLyu/nanodet  （致敬）
+* **该代码基于NanoDet项目进行小裁剪，专门用来实现Python语言、PyTorch 版本的代码，支持图片、视频文件、摄像头实时目标检测。**
 
+## NanoDet模型介绍
 
-- YOLO、SSD、Fast R-CNN等模型在目标检测方面速度较快和精度较高，但是这些模型比较大，不太适合移植到移动端或嵌入式设备；
-- 轻量级模型 NanoDet-m，对单阶段检测模型三大模块（Head、Neck、Backbone）进行轻量化，目标加检测速度很快；模型文件大小仅几兆（小于4M）。
-- NanoDet 是一种 FCOS 式的单阶段 anchor-free 目标检测模型，它使用 ATSS 进行目标采样，使用 Generalized Focal Loss 损失函数执行分类和边框回归（box regression）
+https://guo-pu.blog.csdn.net/article/details/110410940（借鉴，说明）下为上述模型介绍中的截取内容。
 
 ## 模型性能
 
@@ -45,14 +44,7 @@ pyaml
 opencv-python
 tqdm
 ```
-通常测试感觉GPU加速（显卡驱动、cudatoolkit 、cudnn）、PyTorch、pycocotools相对难装一点
 
-Windows开发环境安装可以参考：
-```text
-安装cudatoolkit 10.1、cudnn7.6请参考 https://blog.csdn.net/qq_41204464/article/details/108807165
-安装PyTorch请参考 https://blog.csdn.net/u014723479/article/details/103001861
-安装pycocotools请参考 https://blog.csdn.net/weixin_41166529/article/details/109997105
-```
 
 ## 运行程序
 ```text
@@ -66,14 +58,6 @@ Windows开发环境安装可以参考：
 # python detect_main.py webcam --config ./config/nanodet-m.yml --model model/nanodet_m.pth --path  0
 ```
 
-
-## 总结
-* 通过测试发现NanoDet确实很快，但识别精度和效果比YOLOv4差不少的。
-* 适用于对检测精度要求不高的，对实时要求高的移动端或嵌入式设备。
-
 ## 详细介绍
 https://guo-pu.blog.csdn.net/article/details/110410940
 
-## 其他版本
-* 用于目标检测，模型小，检测速度快速，适合没GPU显卡的嵌入式设备运行，比如“树莓派”、ARM开发板、嵌入式开发板。
-https://github.com/guo-pu/NanoDet-PyTorch-CPU
