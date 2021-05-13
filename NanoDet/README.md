@@ -5,7 +5,9 @@
 
 ## NanoDet模型介绍
 
-https://guo-pu.blog.csdn.net/article/details/110410940（借鉴，说明）下为上述模型介绍中的截取内容。
+https://guo-pu.blog.csdn.net/article/details/110410940  
+
+（借鉴，说明）下为上述模型介绍中的截取内容。
 
 ## 模型性能
 
